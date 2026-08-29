@@ -1,0 +1,18 @@
+class PartyManager:
+‎
+‎    def __init__(self):
+‎        self.roster = [None] * 4
+‎        self.count = 0
+‎
+‎    def add_character(self, character):
+‎        if self.count < 4:
+‎            self.roster[self.count] = character
+‎            self.count += 1
+‎            return True
+‎
+‎        return False
+‎
+‎    def execute_turn(self):
+‎        for character in self.roster:
+‎            if character is not None:
+‎                print(character.perform_action())
