@@ -1,0 +1,24 @@
+‎party = PartyManager()
+‎
+‎arthur = Warrior("Arthur", 100, 10)
+‎merlin = Mage("Merlin", 80, 20)
+‎
+‎party.add_character(arthur)
+‎party.add_character(merlin)
+‎
+‎print("=== PARTY ROSTER LOADED ===")
+‎print(f"1. {arthur.get_name()} (Warrior) - HP: {arthur.get_hp()}")
+‎print(f"2. {merlin.get_name()} (Mage) - HP: {merlin.get_hp()} | Mana: {merlin.get_mana()}")
+‎
+‎print("\n=== TURN 1 ACTIONS (POLYMORPHISM TEST) ===")
+‎party.execute_turn()
+‎
+‎print("\n=== ENCAPSULATION & DAMAGE TEST ===")
+‎
+‎print("Arthur takes 30 incoming damage! (Shield blocked 10).")
+‎arthur.take_damage(30)
+‎print(f"Arthur remaining HP: {arthur.get_hp()}")
+‎
+‎print("Arthur takes 500 massive damage!")
+‎arthur.take_damage(500)
+‎print(f"Arthur remaining HP: {arthur.get_hp()} (Validated: HP cannot be negative)")
