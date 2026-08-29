@@ -1,0 +1,15 @@
+class Mage(Character):
+‎
+‎    def __init__(self, name, hp=100, mana=20):
+‎        super().__init__(name, hp)
+‎        self.__mana = mana
+‎
+‎    def get_mana(self):
+‎        return self.__mana
+‎
+‎    def perform_action(self):
+‎        if self.__mana >= 10:
+‎            self.__mana -= 10
+‎            return f"{self.get_name()} casts Fireball for 40 magic damage!"
+‎        else:
+‎            return f"{self.get_name()} has no mana and strikes with a staff for 5 damage!"
