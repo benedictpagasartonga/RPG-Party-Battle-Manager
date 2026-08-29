@@ -1,0 +1,14 @@
+class Warrior(Character):
+‎
+‎    def __init__(self, name, hp=100, shield_block=10):
+‎        super().__init__(name, hp)
+‎        self.__shield_block = shield_block
+‎
+‎    def perform_action(self):
+‎        return f"{self.get_name()} swings a broadsword for 25 physical damage!"
+‎
+‎    def take_damage(self, amount):
+‎        damage = amount - self.__shield_block
+‎
+‎        if damage > 0:
+‎            super().take_damage(damage)
